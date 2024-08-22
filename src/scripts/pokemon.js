@@ -24,13 +24,12 @@ $(() => {
         );
 
         $(".pokemon__container").append(pokemonCard);
-        console.log(`#pokemon__card${data.id}`);
-        
+        // console.log(`#pokemon__card${data.id}`);
+
         gsap.from(`#pokemon__card${data.id}`, {
           opacity: 0,
-          y: -70,
-          duration: 1,
-          stagger: 0.2,
+          y: -100,
+          duration: 1.5,
           ease: "power4.inOut",
         });
 
@@ -39,7 +38,7 @@ $(() => {
           duration: 1.5,
           y: -20,
           ease: "back.in(1.7)",
-          scale: 1.2,
+          scale: 1.1,
         });
 
         pokemonCard.on("click", () => {
@@ -58,7 +57,7 @@ $(() => {
         // console.log(data);
 
         pokemonCard
-          .prepend(
+          .append(
             `<div class="pokemon__image" id="pokemon__image${data.id}"><img src="${data.sprites.front_default}"></div>`
           )
           .off();
@@ -66,10 +65,19 @@ $(() => {
         gsap.from(`#pokemon__image${data.id}`, {
           opacity: 0,
           y: -100,
-          duration: 1,
+          duration: 1.2,
           ease: "bounce.out",
           scale: 15,
         });
+
+        gsap.to(`#pokemon__image${data.id}`, {
+          delay: 1.5,
+          duration: 1.5,
+          ease: "power1.inOut",
+          scale: 1.6,
+        });
+
+
       },
       error: () => {
         console.log("error displaying image");
@@ -84,6 +92,12 @@ $(() => {
       // console.log(pokemon.name);
       displayPokemonName(pokemon.name);
     });
+
+    $(".gif_container").css({
+      index: -1,
+      display: "none",
+    });
+
     offset += 10;
   });
 });

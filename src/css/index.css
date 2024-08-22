@@ -10,6 +10,7 @@
 body {
   min-height: 100dvh;
   overflow-x: hidden;
+  background-color: #f2f3f4;
 }
 
 input,
@@ -49,33 +50,33 @@ svg {
   font-family: "Pokemon";
   src: url(/fonts/Pokemon_Solid.ttf) format("truetype");
 }
-.header {
+#header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #ef5350;
   padding: 2.5rem;
 }
-.header .header__logo {
+#header .header__logo {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   list-style: none;
   max-width: 10rem;
 }
-.header .header__nav {
+#header .header__nav {
   list-style: none;
 }
-.header .header__nav a {
+#header .header__nav a {
   font-family: "Valorant", sans-serif;
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
 }
-.header .header__nav li {
+#header .header__nav li {
   padding: 1rem;
 }
-.header .header__nav li:hover {
+#header .header__nav li:hover {
   background-color: #f44336;
   border-radius: 3rem;
 }
@@ -87,6 +88,7 @@ main {
   justify-content: center;
   gap: 3rem;
   padding: 2rem;
+  background-color: #f2f3f4;
 }
 main .pokemon__container {
   display: flex;
@@ -112,11 +114,14 @@ main .pokemon__container .pokemon__card {
   color: #f1c514;
   text-shadow: 0 1px 0px #378ab4, 1px 0 0px #3b4cca, 1px 2px 1px #378ab4, 2px 1px 1px #3b4cca, 2px 3px 2px #378ab4, 3px 2px 2px #3b4cca, 3px 4px 2px #378ab4, 4px 3px 3px #3b4cca, 4px 5px 3px #378ab4, 5px 4px 2px #3b4cca, 5px 6px 2px #378ab4, 6px 5px 2px #3b4cca, 6px 7px 1px #378ab4, 7px 6px 1px #3b4cca, 7px 8px 0px #378ab4, 8px 7px 0px #3b4cca;
 }
+main .pokemon__container .pokemon__card .pokemon__name {
+  z-index: 10;
+}
 main .pokemon__container .pokemon__card img {
   width: 10rem;
 }
 main .pokemon__container .pokemon__card:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
   box-shadow: 10px 7px 60px 0px rgba(0, 0, 0, 0.75);
 }
 main .pokemon-button {
@@ -137,6 +142,17 @@ main .pokemon-button {
 main .pokemon-button:active {
   transform: translateY(4px);
   box-shadow: none;
+}
+main .gif_container {
+  cursor: pointer;
+  width: 10rem;
+  transform: rotate(-25deg);
+  position: relative;
+  top: -130px;
+  left: 70px;
+}
+main .gif_container:hover {
+  z-index: -2;
 }
 
 /*# sourceMappingURL=index.css.map */

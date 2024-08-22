@@ -1,0 +1,162 @@
+// Reset
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+  background-color: #32333d;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+img,
+video,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
+// Styles
+
+@font-face {
+  font-family: "Valorant";
+  src: url(/fonts/Valorant_Font.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pokemon";
+  src: url(/fonts/Pokemon_Solid.ttf) format("truetype");
+}
+
+#header_valorant {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #27272f;
+  padding: 2.5rem;
+
+  .header__logo {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+
+    #valorant_logo {
+      max-width: 6rem;
+    }
+
+    h1 {
+      font-family: "valorant", sans-serif;
+      color: azure;
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+
+    #pokemon_link {
+      font-family: "pokemon", sans-serif;
+      letter-spacing: 4px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    li {
+      padding: 1rem;
+    }
+
+    li:hover {
+      background-color: #f1c514;
+      border-radius: 3rem 1rem;
+      transition: 500ms ease-in-out;
+    }
+
+    #pokemon_link:hover {
+      color: black;
+      transition: 500ms ease-in-out;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #32333d;
+  
+
+  .valorant__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+
+    .valorant__card {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      font-family: "Valorant", sans-serif;
+      font-size: 1.5rem;
+      background-color: #E8E8E8;
+      border-radius: 1rem;
+      box-shadow: 0 8px 16px rgba(122, 118, 118, 0.2);
+      width: 19rem;
+      min-height: 20rem;
+      padding: 1.25rem;
+      letter-spacing: 5px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 500ms ease-in-out ;
+
+
+      img{
+        width: 10rem;
+      }
+
+      &:hover {
+        color: #f2f3f4;
+        background-color: #515263;
+        transition: 500ms ease-in-out;
+        transform: scale(1.1);
+        box-shadow: 10px 7px 60px 0px rgba(112, 112, 112, 0.75); ;
+      }
+    }
+  }
+}

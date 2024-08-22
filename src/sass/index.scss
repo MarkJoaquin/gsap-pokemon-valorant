@@ -7,11 +7,10 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   min-height: 100dvh;
   overflow-x: hidden;
+  background-color: #f2f3f4;
 }
 input,
 button,
@@ -53,7 +52,7 @@ svg {
   src: url(/fonts/Pokemon_Solid.ttf) format("truetype");
 }
 
-.header {
+#header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -97,6 +96,7 @@ main {
   justify-content: center;
   gap: 3rem;
   padding: 2rem;
+  background-color: #f2f3f4;
 
   .pokemon__container {
     display: flex;
@@ -127,12 +127,16 @@ main {
         6px 7px 1px #378ab4, 7px 6px 1px #3b4cca, 7px 8px 0px #378ab4,
         8px 7px 0px #3b4cca;
 
+        .pokemon__name{
+          z-index: 10;
+        }
+
       img {
         width: 10rem;
       }
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.1) !important;
         box-shadow: 10px 7px 60px 0px rgba(0, 0, 0, 0.75);
       }
     }
@@ -157,5 +161,18 @@ main {
   .pokemon-button:active {
     transform: translateY(4px);
     box-shadow: none;
+  }
+
+  .gif_container {
+    cursor: pointer;
+    width: 10rem;
+    transform: rotate(-25deg);
+    position: relative;
+    top: -130px;
+    left: 70px;
+
+    &:hover {
+      z-index: -2;
+    }
   }
 }
