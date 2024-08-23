@@ -117,7 +117,7 @@ main {
       width: 19rem;
       min-height: 20rem;
       padding: 1.25rem;
-      letter-spacing: 5px;
+      letter-spacing: 5.5px;
       text-align: center;
       color: #f1c514;
       text-shadow: 0 1px 0px #378ab4, 1px 0 0px #3b4cca, 1px 2px 1px #378ab4,
@@ -171,8 +171,8 @@ main {
     top: -130px;
     left: 70px;
 
-    &:hover {
-      z-index: -2;
+    & img:hover {
+      display: none;
     }
   }
 }

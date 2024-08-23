@@ -62,19 +62,26 @@ $(() => {
           )
           .off();
 
+          $(`#pokemon__image${data.id}`).append(`<audio src='${data.cries.latest}'autoplay="false"></audio>`);
+
+          // playAudio();
+          /* function playAudio() {
+            $(`#pokemon__image${data.id}`).append(`<audio src='${data.cries.latest}'autoplay="false"></audio>`);
+          } */
+
         gsap.from(`#pokemon__image${data.id}`, {
           opacity: 0,
           y: -100,
-          duration: 1.2,
+          duration: 1.5,
           ease: "bounce.out",
           scale: 15,
         });
 
         gsap.to(`#pokemon__image${data.id}`, {
           delay: 1.5,
-          duration: 1.5,
+          duration: 1,
           ease: "power1.inOut",
-          scale: 1.6,
+          scale: 1.9,
         });
 
 
@@ -89,7 +96,7 @@ $(() => {
     console.log(pokemonData);
 
     $.each(pokemonData.results, (index, pokemon) => {
-      // console.log(pokemon.name);
+      console.log(pokemon);
       displayPokemonName(pokemon.name);
     });
 

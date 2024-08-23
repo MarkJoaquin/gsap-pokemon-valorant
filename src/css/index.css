@@ -109,7 +109,7 @@ main .pokemon__container .pokemon__card {
   width: 19rem;
   min-height: 20rem;
   padding: 1.25rem;
-  letter-spacing: 5px;
+  letter-spacing: 5.5px;
   text-align: center;
   color: #f1c514;
   text-shadow: 0 1px 0px #378ab4, 1px 0 0px #3b4cca, 1px 2px 1px #378ab4, 2px 1px 1px #3b4cca, 2px 3px 2px #378ab4, 3px 2px 2px #3b4cca, 3px 4px 2px #378ab4, 4px 3px 3px #3b4cca, 4px 5px 3px #378ab4, 5px 4px 2px #3b4cca, 5px 6px 2px #378ab4, 6px 5px 2px #3b4cca, 6px 7px 1px #378ab4, 7px 6px 1px #3b4cca, 7px 8px 0px #378ab4, 8px 7px 0px #3b4cca;
@@ -151,8 +151,8 @@ main .gif_container {
   top: -130px;
   left: 70px;
 }
-main .gif_container:hover {
-  z-index: -2;
+main .gif_container img:hover {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */
