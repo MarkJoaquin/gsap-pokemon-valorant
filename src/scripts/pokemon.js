@@ -43,6 +43,10 @@ $(() => {
 
         pokemonCard.on("click", () => {
           displayPokemonImage(pokemonName, pokemonCard);
+
+          pokemonCard.on("click", () => {
+            $($pokemon__imageDiv).append($pokemon__audio);
+          });
         });
       },
       error: () => {
@@ -56,16 +60,27 @@ $(() => {
       success: (data) => {
         // console.log(data);
 
-        pokemonCard
+        let $pokemon__imageDiv = $(
+          `<div class="pokemon__image" id="pokemon__image${data.id}"></div>`
+        );
+        let $pokemon__image = $(`<img src="${data.sprites.front_default}">`);
+        let $pokemon__audio = $(`<audio src='${data.cries.latest}'autoplay="false"></audio>`);
+
+        /* pokemonCard
           .append(
             `<div class="pokemon__image" id="pokemon__image${data.id}"><img src="${data.sprites.front_default}"></div>`
           )
-          .off();
+          .off(); */
 
-          $(`#pokemon__image${data.id}`).append(`<audio src='${data.cries.latest}'autoplay="false"></audio>`);
+        pokemonCard.append($pokemon__imageDiv.append($pokemon__image)).off();
+        $($pokemon__imageDiv).append($pokemon__audio);
 
-          // playAudio();
-          /* function playAudio() {
+        pokemonCard.on("click", () => {
+          $($pokemon__imageDiv).append($pokemon__audio);
+        });
+
+        // playAudio();
+        /* function playAudio() {
             $(`#pokemon__image${data.id}`).append(`<audio src='${data.cries.latest}'autoplay="false"></audio>`);
           } */
 
@@ -83,8 +98,6 @@ $(() => {
           ease: "power1.inOut",
           scale: 1.9,
         });
-
-
       },
       error: () => {
         console.log("error displaying image");

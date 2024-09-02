@@ -137,17 +137,21 @@ main {
       background-color: #E8E8E8;
       border-radius: 1rem;
       box-shadow: 0 8px 16px rgba(122, 118, 118, 0.2);
-      width: 19rem;
-      min-height: 20rem;
+      width: 25rem;
+      min-height: 25rem;
       padding: 1.25rem;
       letter-spacing: 5px;
       text-align: center;
       text-transform: uppercase;
       transition: 500ms ease-in-out ;
 
-
+      [id^='valorant__name'] {
+        z-index: 100;
+      }
+      
       img{
         width: 10rem;
+        
       }
 
       &:hover {
@@ -155,7 +159,8 @@ main {
         background-color: #515263;
         transition: 500ms ease-in-out;
         transform: scale(1.1);
-        box-shadow: 10px 7px 60px 0px rgba(112, 112, 112, 0.75); ;
+        box-shadow: 10px 7px 60px 0px rgba(112, 112, 112, 0.75);
+        z-index: 100;
       }
     }
   }
