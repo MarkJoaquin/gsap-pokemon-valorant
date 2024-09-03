@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:css": "sass -w src/sass:src/css",
-    "live-server": "live-server src --open=pages",
+    "live-server": "live-server --open=index.html",
     "dev": "concurrently \"npm run build:css\" \"npm run live-server\""
   },
   "keywords": [],
