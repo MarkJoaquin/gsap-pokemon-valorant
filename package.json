@@ -6,7 +6,8 @@
   "scripts": {
     "build:css": "sass -w src/sass:src/css",
     "live-server": "live-server --open=index.html",
-    "dev": "concurrently \"npm run build:css\" \"npm run live-server\""
+    "dev": "concurrently \"npm run build:css\" \"npm run live-server\"",
+    "build": "sass src/sass:src/css"
   },
   "keywords": [],
   "author": "",
